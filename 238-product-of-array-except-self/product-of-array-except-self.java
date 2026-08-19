@@ -22,7 +22,7 @@
 //     }
 // }
 
-
+//idea-we will take pdt of left part first in a new array ans then add the right part.
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int n=nums.length;
@@ -30,13 +30,13 @@ class Solution {
         int left=1;
         for (int i=0;i<n;i++) {
             ans[i]=left;
-            left*=nums[i];
+            left=left*nums[i];
         }
        
         int right=1;
         for (int i=n-1;i>=0;i--) {
-            ans[i]*=right;
-            right*=nums[i];
+            ans[i]=ans[i]*right;
+            right=right*nums[i];
         }
         return ans;
     }
