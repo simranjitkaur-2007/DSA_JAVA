@@ -4,7 +4,7 @@ class Solution {
         int n=nums.length;
         for(int i=1;i<n;i++){
             if(nums[i-1]==nums[i])
-            return nums[i-1];
+            return nums[i];
         }
         return -1;
     }
